@@ -9,9 +9,6 @@ of convenience changes to make it easier to use the closure compiler within a Ma
 
 1. The closure compiler can be resolved as a maven dependency:</p>
 
-
-        <input name="email" type="email" title="A valid email, please" class="validate-email">
-
         <dependency>
           <groupId>com.google.javascript</groupId>
           <artifactId>closure-compiler</artifactId>
@@ -47,6 +44,7 @@ Add this snippet to your pom.xml:
         </plugins>
 
 By default this will
+
 * bind to the package phase.
 * look for resources that have a .js as an extension
 * look in the src/main/webapp folder for resources
