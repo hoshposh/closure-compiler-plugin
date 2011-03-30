@@ -8,11 +8,13 @@ Within the closure-compiler Google code project (http://code.google.com/p/closur
 of convenience changes to make it easier to use the closure compiler within a Maven project.
 
 1. The closure compiler can be resolved as a maven dependency:</p>
-  <dependency>
+
+    <dependency>
       <groupId>com.google.javascript</groupId>
-     <artifactId>closure-compiler</artifactId>
-     <version>r916</version>
-  </dependency>
+      <artifactId>closure-compiler</artifactId>
+      <version>r916</version>
+    </dependency>
+
 2. The provide an ant task in their source tree within the following class:
 [com.google.javascript.jscomp.ant.CompileTask.java](http://code.google.com/p/closure-compiler/source/browse/trunk/src/com/google/javascript/jscomp/ant/CompileTask.java)
 
