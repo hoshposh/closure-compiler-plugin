@@ -1,0 +1,51 @@
+Usage
+
+  This plugin compiles javascript using the Google Closure compiler.
+  
++------------------------------------------+
+<project>
+    ...
+    <build>
+        <plugins>
+           <plugin>
+               <groupId>com.google.javascript</groupId>
+               <artifactId>closure-compiler-plugin</artifactId>
+               <executions>
+                   <execution>
+                       <phase>package</phase>
+                       <goals>
+                          <goal>compiler/goal>
+                       </goals>
+                   </execution>
+               </executions>
+               
+               <!-- default configuration settings are shown
+                    for documentation purposes.               -->
+               <configuration>
+                   <resourceDirectory>${basedir}/src/main/webapp</resourceDirectory>
+                   <loggerFileName>closurecompiler.txt</loggerFileName>
+                   <compilationLevel>SIMPLE_OPTIMIZATIONS</compilationLevel>
+                   <warningLevel>DEFAULT</warningLevel>
+                   <writeCompiledCode>false</writeCompiledCode>
+
+                   <!-- if writeCompiledCode is true, the next 2 parameters are required -->
+                   <jsBuildDirectory>${basedir}/target</jsBuildDirectory>
+                   <jsFileName></jsFileName>
+
+                   <force>false</force>
+                   
+                   <includes>
+                       <include>**/*.js</include>
+                   </includes>
+                   <excludes>
+                       <exclude></exclude>
+                   </excludes>
+                   
+               </configuration>
+           </plugin>
+            ...
+        </plugins>
+    <build>
+...
+</project>
++------------------------------------------+

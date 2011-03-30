@@ -1,0 +1,19 @@
+<faqs id="FAQ" title="Frequently Asked Questions">
+    <part id="General">
+        <faq id="WhatsMissing">
+            <question>What closure compiler support is missing?</question>
+            <answer>
+<p>Currently the plugin does not support the addition of external javascript files  It also does not allow
+you to generate a compiled file per input source file.</p>
+            </answer>
+        </faq>
+        <faq id="DetectNeedForCompile">
+            <question>When does the closure compiler run?</question>
+            <answer>
+<p>The plug-in detects if any of the source javascript files are newer than the generated compiled
+javascript artifact.  It will also perform a compilation of the parameter <i>force</i> is set to
+true.</p>
+            </answer>
+        </faq>
+    </part>
+</faqs>
