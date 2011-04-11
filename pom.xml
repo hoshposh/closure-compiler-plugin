@@ -24,7 +24,27 @@
   <packaging>maven-plugin</packaging>
   <version>1.0.0-SNAPSHOT</version>
   <name>Google closure compiler Plugin</name>
-  <url>http://code.google.com/p/closure-compiler/</url>
+  <description>A plugin to provide maven project access to the Google closure compiler for JavaScript validation and compilation.</description>
+  <url>https://github.com/hoshposh/closure-compiler-plugin/</url>
+  <licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+  <scm>
+    <connection>scm:git:git://github.com/hoshposh/closure-compiler-plugin.git</connection>
+    <developerConnection>scm:git:git@github.com:hoshposh/closure-compiler-plugin.git</developerConnection>
+    <url>git@github.com:hoshposh/closure-compiler-plugin.git</url>
+  </scm>
+  <developers>
+    <developer>
+      <id>hoshposh</id>
+      <name>Lyndon Washington</name>
+      <email>hoshposh@crazy-code.com</email>
+    </developer>
+  </developers>
   
   <properties>
     <project.build.java.target>1.6</project.build.java.target>
