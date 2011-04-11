@@ -30,6 +30,7 @@ import java.io.Writer;
 public class MojoReporter {
 
     private PrintStream outputStream;
+    private boolean useSystemOut = false;
     Writer writer = null;
 
     public MojoReporter(String encoding) throws IOException {
@@ -43,6 +44,7 @@ public class MojoReporter {
     public MojoReporter(PrintStream stream, String encoding) throws UnsupportedEncodingException {
         if (stream == null) {
             outputStream = System.out;
+            useSystemOut = true;
         } else {
             outputStream = stream;
         }
@@ -53,7 +55,9 @@ public class MojoReporter {
     public void close() throws IOException {
         if (writer != null) {
             writer.flush();
-            writer.close();
+            if (!useSystemOut) {
+                writer.close();
+            }
         }
     }
 
